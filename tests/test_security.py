@@ -214,8 +214,8 @@ class TestOutputValidator:
         suspicious_outputs = [
             "API_KEY: sk-abc123def456",
             "SECRET_KEY=mysecretvalue",
-            "TOKEN: eyJhbGciOiJIUzI1NiJ9",
-            "PASSWORD = admin123",
+            "TOKEN: mytokenvalue",
+            "PASSWORD = myadminpassword",
         ]
         for output in suspicious_outputs:
             is_valid, issues = self.validator.validate_output(output)
